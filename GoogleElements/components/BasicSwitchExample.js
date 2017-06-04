@@ -10,11 +10,13 @@ class BasicSwitchExample extends Component {
     };
   }
 
+  onValueChange = value => this.setState({ switchIsOn: value })
+
   render() {
     return (
       <View>
         <Switch
-          onValueChange={(value) => this.setState({ switchIsOn: value })}
+          onValueChange={this.onValueChange}
           style={{ marginBottom: 10 }}
           value={this.state.switchIsOn} />
       </View>
