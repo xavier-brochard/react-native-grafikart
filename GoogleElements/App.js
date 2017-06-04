@@ -1,8 +1,13 @@
 import React from 'react';
-import { } from 'react-native';
+import { DrawerNavigator } from 'react-navigation'
 import { ThemeProvider } from 'react-native-material-ui';
 import FontProvider from './components/FontProvider'
 import InboxScreen from './components/inbox/InboxScreen';
+
+const Navigator = DrawerNavigator({
+  Inbox: { screen: InboxScreen },
+  Pending: { screen: InboxScreen }
+})
 
 export default class App extends React.Component {
 
@@ -17,7 +22,7 @@ export default class App extends React.Component {
     return (
       <FontProvider>
         <ThemeProvider>
-          <InboxScreen />
+          <Navigator />
         </ThemeProvider>
       </FontProvider>
     );

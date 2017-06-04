@@ -15,7 +15,7 @@ class ColoredTiles extends Component {
                 style={styles.scrollView}>
                 <View style={styles.scrollViewLayout}>
                     {
-                        times(50, index => <TouchableOpacity key={index} >
+                        times(10, index => <TouchableOpacity key={index} >
                             <Card style={{
                                 container: {
                                     backgroundColor: shuffle(COLOR)[1],
