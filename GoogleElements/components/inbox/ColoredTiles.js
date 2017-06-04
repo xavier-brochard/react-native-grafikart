@@ -15,12 +15,11 @@ class ColoredTiles extends Component {
                 style={styles.scrollView}>
                 <View style={styles.scrollViewLayout}>
                     {
-                        times(100, index => <TouchableOpacity key={index} >
+                        times(50, index => <TouchableOpacity key={index} >
                             <Card style={{
                                 container: {
                                     backgroundColor: shuffle(COLOR)[1],
                                     height: 100,
-                                    width: 100
                                 },
                             }} />
                         </TouchableOpacity>)
@@ -32,16 +31,9 @@ class ColoredTiles extends Component {
 }
 
 const styles = {
-    scrollView: {
-        height: 555,
-    },
     scrollViewLayout: {
         flex: 1,
-        flexWrap: 'wrap',
-        flexDirection: 'row'
-    },
-    horizontalScrollView: {
-        height: 106,
+        flexDirection: 'column',
     },
 };
 
